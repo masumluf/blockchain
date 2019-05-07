@@ -1,0 +1,9 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "bitcoin",
+  "main": "index.js",
+  "repository": "https://github.com/masumluf/blockchain.git",
+  "author": "masum",
+  "license": "MIT"
+}
