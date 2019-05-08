@@ -31,6 +31,12 @@ class BlockChain{
         newBlock.hash=newBlock.callculateHash();
         this.chian.push(newBlock);
     }
+
+    isblockchainValid(){
+        for(i=0; i<this.chian.length; i++){
+            
+        }
+    }
     
 }
 
