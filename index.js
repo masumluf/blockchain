@@ -33,9 +33,19 @@ class BlockChain{
     }
 
     isblockchainValid(){
-        for(i=0; i<this.chian.length; i++){
-            
+        for(let i=1; i<this.chian.length; i++){
+            const currentBlock=this.chian[i];
+            const previousBlock=this.chian[i-1];
+
+            if(currentBlock.hash !== currentBlock.callculateHash()){
+                return false;
+            }
+            if(currentBlock.previoushash !== previousBlock.hash){
+                return false;
+            }
         }
+        return true;
+
     }
     
 }
@@ -46,6 +56,9 @@ const josscoin=new BlockChain();
 const newBlock= new Block("2019-05-07", { amount: 500 });
 
 josscoin.addChain(newBlock);
+console.log(josscoin.isblockchainValid());
 
-console.log(josscoin);
+josscoin.chian[1].data="hacked";
+
+console.log(josscoin.isblockchainValid());
 
